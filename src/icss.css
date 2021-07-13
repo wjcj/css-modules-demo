@@ -1,0 +1,31 @@
+:import("./dep.css") {
+  __themeColor: theme-color;
+  __headerHeight: header-height;
+  __headerName: header-name;
+  __secondary: color-secondary;
+  __screenMin: screen-min;
+  __screenMax: screen-max;
+}
+
+/* 选择器 */
+.__headerName .logo {
+  color: red;
+  line-height: __headerHeight;
+}
+
+/* 值声明 */
+.border-theme {
+  border: 1px solid __themeColor;
+}
+
+/* 媒体查询参数 */
+@media (min-width: __screenMin) and (max-width: __screenMax) {
+  .__headerName {
+    box-shadow: 0 4px 4px __secondary;
+  }
+}
+
+:export {
+  headerHeight: __headerHeight;
+  headerName: __headerName;
+}

@@ -1,0 +1,30 @@
+.btn {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btnPrimary {
+  composes: btn;
+  background: #1890ff;
+}
+
+.btnDanger {
+  composes: btn;
+  background: red;
+}
+
+.btnSmall, .btnMiddle, .btnLarge {
+  composes: btn;
+  color: red;
+}
+
+.btnCircle {
+  font-size: 14px;
+  composes: circle from './shape.module.css';
+}
+
+/* Error: composition is only allowed when selector is single :local class name not in ".button", ".button" is weird */
+/* :global(.button) {
+  composes: btn;
+  color: red;
+} */

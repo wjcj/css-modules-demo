@@ -1,0 +1,8 @@
+:export {
+  theme-color: #1890ff;
+  header-height: 60px;
+  header-name: abc-header;
+  color-secondary: #666;
+  screen-min: 768px;
+  screen-max: 1200px;
+}

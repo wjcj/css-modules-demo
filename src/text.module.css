@@ -1,0 +1,24 @@
+@value fontSize: 16px;
+
+/* 从单个文件导入多个，并使用解构、设置别名 */
+/* @value variables: "./variables.module.css"; */
+/* @value primary as color-primary, secondary from variables; */
+
+/* 或者 */
+@value primary as color-primary, secondary from "./variables.module.css";
+
+/* 值作为选择器名称 */
+@value selectorValue: secondary-color;
+.selectorValue {
+  color: secondary;
+}
+
+.textPrimary {
+  font-size: fontSize;
+  color: color-primary;
+}
+
+.textSecondary {
+  font-size: fontSize;
+  color: secondary;
+}
